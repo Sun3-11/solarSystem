@@ -1,0 +1,256 @@
+@import url("https://use.typekit.net/jmk3xov.css");
+
+*{
+  font-family: 'Press Start 2P', cursive;
+}
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#mercury{
+  height:2vmin;
+  width:2vmin;
+}
+
+:root {
+  --dark-bg: rgba(15, 15, 15, 0.95);
+  --spacing: 350px;
+
+  font-family: 'Press Start 2P', cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+main {
+  width: 100vw;
+  color: white;
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  margin: 0px auto;
+  padding: 120px 0px;
+  
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+h1, h2, h3, blockquote {
+  font-family: 'Press Start 2P', cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+/*
+  header {
+   /* background: var(--dark-bg);
+   background: rgb(15 15 15 / 39%);
+    grid-column: 2 / span 5;
+    font-size: 2.5rem;
+    padding: 2rem;
+    margin-bottom: var(--spacing);
+  }
+*/
+  section {
+    grid-column: 2 / 8;
+    padding: 1rem;
+    background: rgb(15 15 15 / 0%);
+    font-size: 1.25rem;
+    line-height: 2.5;
+    margin-bottom: var(--spacing);
+  }
+
+  blockquote {
+    margin: 0;
+    padding: 0;
+    grid-column: 2 / span 9;
+    
+    margin-bottom: var(--spacing);
+  }
+
+  blockquote p {
+    color: #fffefe;
+    background-color: #fbfbfb14;
+    font-size: 3rem;
+    display: inline;
+    line-height: 1;
+  }
+
+  .left {
+    grid-column: 6 / 12;
+  }
+
+  
+
+  .transition-fade{
+    opacity: 1;
+    transition: 500ms;
+    transform: translate(0);
+    transform-origin: left;
+}
+#section1{
+  margin-top: 185px;
+}
+html.is-animating .transition-fade{
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+html.is-leaving .transition-fade{
+    opacity: 0;
+    transform: translateX(0);
+}
+
+.transition-swipe{
+    transition: 500ms;
+    transform: translateY(0);
+}
+
+html.is-animating .transition-swipe{
+ 
+    transform: translateY(100%);
+} 
+
+ .navbar{
+  margin-bottom: 25px;
+  padding: 20px;
+  list-style: none;
+  max-width: 100%;
+  margin: auto 10px auto 10px;
+   }
+.navbar ul{
+   padding: 3px;
+   float: right;
+}    
+.navbar li{
+      display:inline-block;
+  }
+.navbar a{
+      font-size: 18px;
+      margin: 0 auto 0 auto;
+      padding:0 20px;
+      display: block;
+      line-height: 31px;
+      text-transform:capitalize;
+      text-decoration: none;
+    
+      transition-duration: .4s;
+      }
+
+#mr{
+  margin-right: 20px;
+}
+
+.pixel {
+  position: relative;
+  
+  display: block;
+  padding: 10px 10px;
+  position: relative;
+  background: white;
+  width: auto;
+  z-index: 2;
+  text-transform: uppercase;
+  font-size: 25px;
+  color:#290C28 ;
+}
+
+.pixel::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: -10px;
+  right: -10px;
+  background: white;
+  z-index: -1;
+}
+
+.pixel::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: -6px;
+  right: -6px;
+  background: white;
+  z-index: -1;
+}
+.pixel:hover{
+  background-color: #290C28 ;
+  color: #fff;
+  transition-duration: 0.5s;
+}
+.pixel:hover::after,.pixel:hover::before{
+    background-color: #290C28 ;
+    color: #fff;
+    transition-duration: 0.5s;
+
+}
+.active:focus{
+  background-color: #290C28 ;
+  color: goldenrod;
+}
+.active:focus::after,.active:focus::before{
+    background-color: #290C28 ;
+    color: goldenrod;
+    
+
+}
+
+
+ 
+#wave {
+  position: relative;
+  border-bottom: 2px dotted #8d7e6a;
+  border-radius: 50px;
+}
+
+
+
+#wave::after {
+  content: "";
+  position: absolute;
+  left: -5px;
+  right: 0;
+  bottom: -17px;
+  height: 27px;
+  /* opacity: 0.5; */
+  background-size: 55px 32px;
+  background-image: url(../img/palnt.jpg);
+  
+  background-position: center;
+  z-index: 1;
+  /* animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite; */
+  background-repeat: no-repeat;
+ 
+  background-position: left;
+}
+
+
+.object{
+  border-radius:50%;
+  position: absolute;
+}
+
+.p-orbit, #m-orbit{
+  border:0.1vmin solid lightgrey;
+  opacity:0.5;
+  background: transparent;
+}
+
+#canvas1{
+position: fixed;
+  background: #70278300;
+  
+}
